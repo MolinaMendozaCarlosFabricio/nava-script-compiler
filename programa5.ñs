@@ -1,0 +1,27 @@
+entero stock = 3;
+entero opcion = 0;
+logico continuar = verdadero;
+
+hacer {
+    imprimir("1. Agregar | 2. Ver | 3. Salir");
+    leer(opcion);
+
+    segun (opcion) {
+        caso 1:
+            stock = stock + 1;
+            imprimir("Stock actualizado");
+        romper;
+        caso 2:
+            imprimir("Total en stock:");
+            imprimir(stock);
+        romper;
+        caso 3:
+            continuar = falso;
+        romper;
+        defecto:
+            imprimir("Opción no válida");
+        romper;
+    }
+} mientras (continuar == verdadero);
+
+imprimir("Programa finalizado.");

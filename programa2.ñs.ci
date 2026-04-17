@@ -1,0 +1,19 @@
+DECL entero a
+a = 48
+DECL entero b
+b = 18
+PRINT "Calculando MCD de:"
+PRINT a
+PRINT b
+L1:
+t1 = b != 0
+IFFALSE t1 GOTO L2
+DECL entero temporal
+temporal = b
+t2 = a % b
+b = t2
+a = temporal
+GOTO L1
+L2:
+PRINT "El MCD es:"
+PRINT a

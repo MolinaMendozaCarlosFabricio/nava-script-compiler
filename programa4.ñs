@@ -1,0 +1,17 @@
+entero x = 10
+
+// Falta el paréntesis de cierre en la condición
+si (x > 5 {
+    imprimir("Falta un paréntesis");
+}
+
+// El bloque 'para' tiene un punto y coma extra o falta una sección
+para (entero i = 0; i < 5) {
+    imprimir(i);
+}
+
+// Caso de 'segun' sin los dos puntos
+segun (x) {
+    caso 1
+        imprimir("Error");
+}

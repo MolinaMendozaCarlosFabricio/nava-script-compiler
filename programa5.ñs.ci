@@ -1,0 +1,38 @@
+DECL entero stock
+stock = 3
+DECL entero opcion
+opcion = 0
+DECL logico continuar
+continuar = true
+L1:
+PRINT "1. Agregar | 2. Ver | 3. Salir"
+READ opcion
+t1 = opcion == 1
+IFTRUE t1 GOTO L3
+t2 = opcion == 2
+IFTRUE t2 GOTO L4
+t3 = opcion == 3
+IFTRUE t3 GOTO L5
+GOTO L6
+L3:
+t4 = stock + 1
+stock = t4
+PRINT "Stock actualizado"
+GOTO __salida__
+GOTO L2
+L4:
+PRINT "Total en stock:"
+PRINT stock
+GOTO __salida__
+GOTO L2
+L5:
+continuar = false
+GOTO __salida__
+GOTO L2
+L6:
+PRINT "Opción no válida"
+GOTO __salida__
+L2:
+t5 = continuar == true
+IFTRUE t5 GOTO L1
+PRINT "Programa finalizado."

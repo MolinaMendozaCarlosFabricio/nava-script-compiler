@@ -1,0 +1,12 @@
+entero contador = 10;
+cadena etiqueta = "Puntos: ";
+logico esValido = verdadero;
+
+// No se puede restar una cadena a un entero
+entero resultado = contador - etiqueta;
+
+// Asignar un decimal a un entero
+entero radio = 5.5;
+
+// Leer una variable no declarada
+imprimir(value);

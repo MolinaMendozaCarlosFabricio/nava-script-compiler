@@ -1,0 +1,14 @@
+// Pruebas de símbolos no permitidos
+
+entero @valor = 100;       // Símbolo '@' ilegal
+entero precio$ = 50;       // Símbolo '$' ilegal
+
+entero num = 45;
+decimal distancia = 10.5.2; // Un número no puede tener dos puntos decimales
+
+cadena mensaje = "Hola;    // Cadena sin cerrar
+
+// ERROR: Uso de caracteres invisibles o especiales fuera de comentarios
+#EstoNoEsUnComentario;     // '#' no definido
+
+entero resultado = 10 \ 2;  // '\' no definido

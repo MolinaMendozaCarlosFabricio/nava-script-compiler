@@ -1,0 +1,16 @@
+// mcd.mileng - Cálculo del Máximo Común Divisor
+entero a = 48;
+entero b = 18;
+
+imprimir("Calculando MCD de:");
+imprimir(a);
+imprimir(b);
+
+mientras (b != 0) {
+    entero temporal = b;
+    b = a % b;
+    a = temporal;
+}
+
+imprimir("El MCD es:");
+imprimir(a); // Debería imprimir 6

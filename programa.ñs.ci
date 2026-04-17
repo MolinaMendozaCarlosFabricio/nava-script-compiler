@@ -1,0 +1,122 @@
+DECL entero a
+a = 10
+DECL entero b
+b = 5
+DECL decimal pi
+pi = 3.14
+DECL cadena nombre
+nombre = "Ñava"
+DECL logico activo
+activo = true
+DECL entero suma
+t1 = a + b
+suma = t1
+DECL entero resta
+t2 = a - b
+resta = t2
+DECL entero producto
+t3 = a * b
+producto = t3
+DECL decimal division
+t4 = a / b
+division = t4
+DECL entero modulo
+t5 = a % b
+modulo = t5
+PRINT "=== Operaciones Aritméticas ==="
+PRINT suma
+PRINT resta
+PRINT producto
+PRINT division
+PRINT modulo
+DECL decimal area
+t6 = b * b
+t7 = pi * t6
+area = t7
+PRINT "Área del círculo:"
+PRINT area
+DECL cadena saludo
+saludo = "Hola desde "
+DECL cadena mensaje
+t8 = saludo + nombre
+mensaje = t8
+PRINT mensaje
+DECL entero num
+READ num
+PRINT "Número ingresado:"
+PRINT num
+DECL cadena texto
+READ texto
+PRINT "Texto ingresado:"
+PRINT texto
+PRINT "=== si-sino ==="
+t9 = num > 0
+IFFALSE t9 GOTO L1
+PRINT "El número es positivo"
+GOTO L2
+L1:
+t10 = num == 0
+IFFALSE t10 GOTO L3
+PRINT "El número es cero"
+GOTO L4
+L3:
+PRINT "El número es negativo"
+L4:
+L2:
+PRINT "=== mientras ==="
+DECL entero contador
+contador = 1
+L5:
+t11 = contador <= 5
+IFFALSE t11 GOTO L6
+PRINT contador
+t12 = contador + 1
+contador = t12
+GOTO L5
+L6:
+PRINT "=== hacer-mientras ==="
+DECL entero x
+x = 1
+L7:
+PRINT x
+t13 = x + 1
+x = t13
+t14 = x <= 3
+IFTRUE t14 GOTO L7
+PRINT "=== para ==="
+DECL entero i
+i = 0
+L8:
+t15 = i < 5
+IFFALSE t15 GOTO L9
+PRINT i
+t16 = i + 1
+i = t16
+GOTO L8
+L9:
+PRINT "=== segun-caso ==="
+DECL entero opcion
+opcion = 2
+t17 = opcion == 1
+IFTRUE t17 GOTO L11
+t18 = opcion == 2
+IFTRUE t18 GOTO L12
+t19 = opcion == 3
+IFTRUE t19 GOTO L13
+GOTO L14
+L11:
+PRINT "Opción uno"
+GOTO __salida__
+GOTO L10
+L12:
+PRINT "Opción dos"
+GOTO __salida__
+GOTO L10
+L13:
+PRINT "Opción tres"
+GOTO __salida__
+GOTO L10
+L14:
+PRINT "Opción desconocida"
+GOTO __salida__
+L10:

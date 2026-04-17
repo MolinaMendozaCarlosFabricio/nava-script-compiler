@@ -1,0 +1,96 @@
+// programa.ñs - Programa de ejemplo para el compilador Ñava Script
+// Universidad Politécnica de Chiapas - Compiladores e Intérpretes
+
+// ── 1. Declaración e inicialización de variables ──────────────────────────────
+entero a = 10;
+entero b = 5;
+decimal pi = 3.14;
+cadena nombre = "Ñava";
+logico activo = verdadero;
+
+// ── 2. Operaciones aritméticas ────────────────────────────────────────────────
+entero suma = a + b;
+entero resta = a - b;
+entero producto = a * b;
+decimal division = a / b;
+entero modulo = a % b;
+
+imprimir("=== Operaciones Aritméticas ===");
+imprimir(suma);
+imprimir(resta);
+imprimir(producto);
+imprimir(division);
+imprimir(modulo);
+
+// ── 3. Expresiones con paréntesis ─────────────────────────────────────────────
+decimal area = pi * (b * b);
+imprimir("Área del círculo:");
+imprimir(area);
+
+// ── 4. Cadenas ────────────────────────────────────────────────────────────────
+cadena saludo = "Hola desde ";
+cadena mensaje = saludo + nombre;
+imprimir(mensaje);
+
+// ── 5. Entrada del usuario ────────────────────────────────────────────────────
+entero num;
+leer(num);
+imprimir("Número ingresado:");
+imprimir(num);
+
+cadena texto;
+leer(texto);
+imprimir("Texto ingresado:");
+imprimir(texto);
+
+// ── 6. Sentencia si-sino ──────────────────────────────────────────────────────
+imprimir("=== si-sino ===");
+si (num > 0) {
+    imprimir("El número es positivo");
+} sino {
+    si (num == 0) {
+        imprimir("El número es cero");
+    } sino {
+        imprimir("El número es negativo");
+    }
+}
+
+// ── 7. Sentencia mientras ─────────────────────────────────────────────────────
+imprimir("=== mientras ===");
+entero contador = 1;
+mientras (contador <= 5) {
+    imprimir(contador);
+    contador = contador + 1;
+}
+
+// ── 8. Sentencia hacer-mientras ───────────────────────────────────────────────
+imprimir("=== hacer-mientras ===");
+entero x = 1;
+hacer {
+    imprimir(x);
+    x = x + 1;
+} mientras (x <= 3);
+
+// ── 9. Sentencia para ────────────────────────────────────────────────────────
+imprimir("=== para ===");
+para (entero i = 0; i < 5; i++) {
+    imprimir(i);
+}
+
+// ── 10. Sentencia segun-caso ─────────────────────────────────────────────────
+imprimir("=== segun-caso ===");
+entero opcion = 2;
+segun (opcion) {
+    caso 1:
+        imprimir("Opción uno");
+    romper;
+    caso 2:
+        imprimir("Opción dos");
+    romper;
+    caso 3:
+        imprimir("Opción tres");
+    romper;
+    defecto:
+        imprimir("Opción desconocida");
+    romper;
+}
